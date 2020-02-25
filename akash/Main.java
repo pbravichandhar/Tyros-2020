@@ -1,3 +1,10 @@
+/**
+*<h6>This program explains varius OOPS concpets such as polymorphism, constructor, Abstraction, inheritance etc.</h6>
+*
+*@author Akaash
+*@version 1.0
+*@since 25.02.2020 
+*/
 abstract class personal{    
 	abstract void login();    //Abstraction is used to hide the unnessary login details 
 }                                   
