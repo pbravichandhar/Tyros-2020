@@ -1,3 +1,10 @@
+/**
+*<h6> This program compressed all oops concepts in single code </h6> 
+*
+*@author Arunkumar
+*@version 1.0
+*@since 25-02-2020 
+**/
 import java.io.*;
 abstract class abstr                    // abstract class
 {
