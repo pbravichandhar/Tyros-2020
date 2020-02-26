@@ -1,3 +1,10 @@
+/**
+*<h6> Multiplication  program  form in java </h6> 
+*
+*@author Arunkumar
+*@version 1.0
+*@since 25-02-2020 
+*/
 import java.io.*;
 import java.util.*;
 public class multi
