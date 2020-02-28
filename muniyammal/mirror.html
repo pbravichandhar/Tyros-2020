@@ -1,0 +1,17 @@
+<html>
+  <head>
+     <title> mirror letters </title>
+  </head>
+ <body>
+    <script>
+            var str = "bakya";
+            var a = "zyxwvutsrqponmlkjihgfedcba";
+            var c = "";
+            for(let i = 0; i < str.length; i++)
+            {
+                 c = c + a.charAt(str.charCodeAt(i)-'97');
+            }
+             document.write("the mirror of the string " +str+ " is " +c);
+    </script>
+ </body>      
+</html>
