@@ -129,6 +129,11 @@ let summation = (a,b,c) => {
     return sum;
 }
 
+let string1 = "Akash";
+let string2 = `18 ${4 + 5 + 7 * 4 / 3}`;
+
+console.log(string2);
+
 
 
 
