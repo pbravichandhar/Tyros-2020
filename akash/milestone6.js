@@ -1,4 +1,24 @@
-
+/**
+ * This program explains the concepts in primitive and reference types in JS
+ * 
+ * primitive types:
+ * >Number
+ * >String 
+ * >undefined
+ * >null
+ * >boolean
+ * >symbol
+ * 
+ * Reference types:
+ * >Array
+ * >object
+ * >function
+ * 
+ * Reference types have been explained below
+ * @author Akaash
+ * @version 1.1
+ * @since 02/03/2020
+ */
 //This gives just the concept of hoisting
 console.log('x is', x) //prints undefined 
 
@@ -37,4 +57,16 @@ navy.eligible = 'B.E / B.tech';
 
 console.log(airforce); 
 console.log(navy);
+
+//Symbols in primitve types
+//unique identifier for an object property
+let id = Symbol.for("id");
+
+let user = {
+    name : "Akaash",
+    [id] : 32
+};
+
+console.log(Symbol.keyFor(id));
+console.log(user);
 
