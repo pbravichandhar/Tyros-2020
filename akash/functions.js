@@ -82,6 +82,53 @@ function showPrimes(limit){
 
 showPrimes(30);
 
+//Function Expression
+let greet = function(){
+    return 'Welcome';
+}
+
+name = "Akaash";
+console.log(greet()+" " + name);
+
+//Callback Function
+function showReply(question,yes,no){
+    if(question == "Do you eat chocolates often?")
+        yes();
+    else 
+        no();
+}
+
+function printDoEatChocolates(){
+    console.log("Dont eat them often, then you may damage your teeth..!");
+}
+
+function printDoesntEatChocolates(){
+    console.log("Much better..");
+}
+
+//Here works the callback function by passing other functions as parameters
+showReply("Do you eat chocolates often?",printDoEatChocolates,printDoesntEatChocolates);
+
+//Ternary operator in Functions
+let age = 20;
+let checkAgeIsValid = (age >= 18) ? function(){
+    console.log("Eligible to vote..!");
+} : function(){
+    console.log("Not Eligible....!");
+};
+
+checkAgeIsValid();
+
+//Arrow Functions
+let sum = (a,b) => a + b;
+console.log(sum(1,2));
+
+//Multiline Arrow Function
+let summation = (a,b,c) => {
+    let sum = a + b + c;
+    return sum;
+}
+
 
 
 
