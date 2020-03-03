@@ -1,0 +1,45 @@
+/*
+*<h1>Mirror letter!</h1>
+*This program implements a letter that
+*simply replace a mirror letter to the standard output
+*@author tharani
+*@version 1.0
+*@since 2020-02-26
+*/
+<!DOCTYPE html>
+<html>
+<head>
+<title>program</title>
+</head>
+<body>
+<script>
+//get the input from the user
+var str=window.prompt("Enter the input");
+var reverseAlphabet = "zyxwvutsrqponmlkjihgfedcba";
+var captalize = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+var result="";
+
+//find length of the string
+var l = str.length;
+//loop forwards through all the elements and return result 
+for (var i = 0; i <l; i++) 
+{
+        if(str.charAt(i)>='a' && str.charAt(i)<='z')
+        {
+                //replace the small alphabet with mirror letter
+                result += reverseAlphabet.charAt(str.charCodeAt(i) - 97);
+        }
+        else if(str.charAt(i)>='A' && str.charAt(i)<='Z')
+        {
+                //replace the capital letter with mirror letter
+                result += captalize.charAt(str.charCodeAt(i) - 65);
+        }else
+        {
+                result +=str.charAt(i);
+        }
+}  
+//print the output to the window
+window.alert(result);
+</script>
+</body>
+</html>
