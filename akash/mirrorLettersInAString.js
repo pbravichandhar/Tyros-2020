@@ -23,10 +23,10 @@ standard_input.on('data', function (data, inputString) {
 
 
     //storing the reverse of the alphabets in a string
-    let reveresedString = "zyxvutsrqponmlkjihgfedcba";
+    const reveresedString = "zyxvutsrqponmlkjihgfedcba";
 
     //storing the reverse of the capital alphabet letters
-    let capitalReversedString = "ZYXVUTSRQPONMLKJIHGFEDCBA";
+    const capitalReversedString = "ZYXVUTSRQPONMLKJIHGFEDCBA";
 
     //getting the length of the input string
     let length = inputString.length;
