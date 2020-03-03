@@ -35,7 +35,7 @@ function recursiveReadline(number){
         for(let i=0;i<number;i++){
             inputArray[i] = elements;
         }
-        recursiveReadline(number-1);
+        recursiveReadline(--number);
 
         if(number == 0){
             console.log(inputArray);
