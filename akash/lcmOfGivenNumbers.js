@@ -37,9 +37,9 @@ function recursiveReadline(count){
 
 //To Calculate LCM of given numbers 
 function calculateLCM(){
-    var lcm = lcmArray[0];
-    var gcd = lcmArray[0];
-    for (var i = 1; i < lcmArray.length; i++) {
+    let lcm = lcmArray[0];
+    let gcd = lcmArray[0];
+    for (let i = 1; i < lcmArray.length; i++) {
         gcd = GCD(lcmArray[i], lcm);
         lcm = (lcm * lcmArray[i]) / gcd;
     }
