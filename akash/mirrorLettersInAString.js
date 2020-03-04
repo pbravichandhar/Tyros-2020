@@ -7,7 +7,7 @@
  */
 
 // Get process.stdin as the standard input object.
-var standard_input = process.stdin;
+let standard_input = process.stdin;
 
 // Set input character encoding.
 standard_input.setEncoding('utf-8');
