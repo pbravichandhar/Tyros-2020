@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Mirror Letters</title>
+</head>
+<body>
+    <script>
+       let str = window.prompt("enter a string");   // get a string 
+       let a = "zyxwvutsrqponmlkjihgfedcba";
+       let b = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+            let c = "";
+            for(let  i = 0; i < str.length; i++)
+            {
+                if(str.charAt(i)>='a'&&str.charAt(i)<='z')   //check the letter between a to z
+                {
+                    c = c + a.charAt(str.charCodeAt(i)-'97');
+                }
+                else if(str.charAt(i)>='A'&&str.charAt(i)<='Z')  //check the letter between A to Z
+                {
+                    c = c + b.charAt(str.charCodeAt(i)-'65');
+								}
+								else
+								{ 
+									c = c + str.charAt(i);       // special character shout be added
+								 }
+							}
+						document.write(" The Mirror Of The String Is " + str + " Is " + c);   //mirror letter printed
+		</script>
+</body>
+</html>    
+
+
+
+
+
+    
