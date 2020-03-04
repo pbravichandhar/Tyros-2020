@@ -8,8 +8,7 @@
 import java.io.*;
 import java.util.*;
 public class multis
-{
-	     
+{} 
 	    static void show(int m,int l)        // method denote inputs as arguments
         {
           int p;
