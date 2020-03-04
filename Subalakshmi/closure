@@ -1,0 +1,20 @@
+function closure()  
+{ 
+    let arr = []; 
+    let i; 
+    for (i = 0; i < 4; i++)  
+    { 
+        // storing anonymus function 
+        arr[i] = function () { return i; } 
+    } 
+  
+    // returning the array. 
+    return arr; 
+} 
+  
+let get_arr = closure(); 
+  
+console.log(get_arr[0]()); 
+console.log(get_arr[1]()); 
+console.log(get_arr[2]()); 
+console.log(get_arr[3]()); 

@@ -14,14 +14,13 @@ rl.question('Enter your name:', (name) => {
     person.name = name;
     
     rl.question('Enter no of elements:',(number)=>{
-        recursiveReadline(number);    //recursive function used
+        recursiveReadline(number-1);    //recursive function used
     });
 });
 
 function recursiveReadline(number){
     rl.question('Enter elements:',(elements)=>{
-        for(let i=0;i<number;i++){
-            inputArray[i] = elements;
+            inputArray[number] = elements;
         }
         recursiveReadline(number-1);
 
@@ -42,9 +41,7 @@ function printObject(){
             max = inputArray[j];
         }
     }
-
     person.topNote = max;
-
     console.log(person);
 }
 
