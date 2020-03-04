@@ -21,15 +21,15 @@ rl.question('Enter your name:', (name) => {        // get name
     person.name = name;
     
     rl.question('Enter no of elements:',(number)=>{    // get limitation elements
-        recursiveReadline(number);
+        recursiveReadline(number-1);
     });
 });
 
 function recursiveReadline(number){
     rl.question('Enter elements:',(elements)=>{      // get elements 
-        for(let i=0;i<number;i++){
-            inputArray[i] = elements;
-        }
+        
+            inputArray[number] = elements;
+        
         recursiveReadline(number-1);
 
         if(number == 0){
@@ -44,7 +44,7 @@ function show(){
     person.notes.push(inputArray);
 
     let max = 0;                                     
-    for(let j=0;j<inputArray.length-1;j++){       
+    for(let j=0;j<inputArray.length+1;j++){       
         if(max < inputArray[j]){     // maximun value algorithm
             max = inputArray[j];
         }
