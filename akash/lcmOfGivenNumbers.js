@@ -16,17 +16,17 @@ let lcmArray = [];
 
 //count of numbers to calculate LCM of those numbers
 rl.question('Enter the number count to perform LCM:',(count)=>{
-    recursiveReadline(count);
+    recursiveReadline(count-1);
 });
 
 //Recursive function to get user inputs to an array
 function recursiveReadline(count){
     rl.question('Enter elements:',(numbers)=>{
-        for(let i=0;i<count;i++){
-            lcmArray[i] = numbers;
-        }
+        // for(let i=0;i<count;i++){
+            lcmArray[count] = numbers;
+        // }
     
-    recursiveReadline(--count);
+    recursiveReadline(count-1);
 
         if(count == 0){
             calculateLCM();
@@ -43,6 +43,8 @@ function calculateLCM(){
         gcd = GCD(lcmArray[i], lcm);
         lcm = (lcm * lcmArray[i]) / gcd;
     }
+
+    console.log(lcmArray);
     
     console.log("The LCM of given values is "+lcm);
 

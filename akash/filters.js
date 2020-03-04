@@ -25,17 +25,17 @@ rl.question('Enter your name:', (name) => {
     person.name = name;
     
     rl.question('Enter no of elements:',(number)=>{
-        recursiveReadline(number);
+        recursiveReadline(number-1);
     });
 });
 
 //Recursive function to get the array inputs from the user to the notes property in the object
 function recursiveReadline(number){
     rl.question('Enter elements:',(elements)=>{
-        for(let i=0;i<number;i++){
-            inputArray[i] = elements;
-        }
-        recursiveReadline(--number);
+        // for(let i=0;i<number;i++){
+            inputArray[number] = elements;
+        // }
+        recursiveReadline(number-1);
 
         if(number == 0){
             console.log(inputArray);

@@ -47,10 +47,6 @@ standard_input.on('data', function (data, inputString) {
     //printing out the mirroredString as output
     console.log(mirroredString);
 
-
     //This part is to get out of the program by typing exit in the terminal
-    if(data == "exit\n" || data == "EXIT\n"){
-        console.log("Thank you!");
-        process.exit();
-    }
+    if(data.toLowerCase() == "exit\n") process.exit();
 });
