@@ -1,0 +1,106 @@
+/**
+*<h1> This program explaines the concepts of function expressions in java scripts </h1> 
+*@author Arunkumar</br>
+*@version 1.0</br>
+*@since 05-03-2020</br>
+*/
+<html>
+<head>
+<script type="text/javascript">
+ // factorial recursion
+ let num = 5;
+ let factorial = multiplyNumbers(num);
+ document.writeln("Factorial of " + num + " = " + factorial);
+  function multiplyNumbers( num)
+    {
+        if (num >= 1)
+            return num * multiplyNumbers(num - 1);
+        else
+            return 1;
+    } 
+ // closure function 
+  function race()
+  {
+        let speed=130;
+        function car()
+        {
+        	document.writeln("</br> car speed is"+speed);
+        }
+        return car();
+  }
+  race(); 
+// this keyword
+   var myVar = 100;
+
+	function getvalue() {
+	   myVar = 200;
+
+		document.writeln("</br></br>");
+		document.writeln("</br>myVar = " + myVar); 
+		document.writeln("</br>this.myVar = " + this.myVar); 
+	};  
+     
+      getvalue();
+      document.writeln("</br>out of myVar = " + myVar);
+  // mimicking block scope
+  var i=5;
+  if(i==5)
+  {
+  	var objname={
+  		name:"bmw",
+  		color:"black",
+  	};
+
+  }
+  document.writeln("</br>car name is:"+objname.name);
+  document.writeln("</br>car color is:"+objname.color);
+// private variable
+  function walk(time)
+  {
+  	var time;   // private variable
+  document.writeln("</br>walking time is :"+time);
+  }
+  walk(20);
+  function talk(time)
+  {
+  	this.time=time;   // public variable
+  document.writeln("</br>talking time is :"+time);
+  }
+  talk(20);
+ // static private variable
+   
+   function lift()
+  {
+    
+   document.writeln("</br>weight is :"+lift.liftweight);
+  }
+  lift.liftweight=550;      
+  lift(); 
+
+ //modular pattern
+
+ var pattern=( function() {
+   let sum=1;
+   return {
+      add:function() {
+         sum+=1;
+         document.writeln("</br>increment sum:"+sum);
+      },
+      clear:function() {
+         sum=0;
+         document.writeln("</br>reset sum:"+sum);
+      }
+    }
+
+}());
+pattern.add();
+pattern.clear(); 
+
+
+</script>	
+</head>
+<body>
+ <h1>functions expressions in js</h1>
+ 	
+</body>
+</html>
