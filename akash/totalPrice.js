@@ -14,9 +14,16 @@ const read = readline.createInterface({
 
 let productList = []
 
-read.question('Enter the no of products:', (productCount) => {
-    getProductDetails(productCount - 1)
-})
+let retry = function(){
+    read.question('Enter the no of products:', (productCount) => {
+        if(isNaN(parseInt(productCount))){
+            console.log("Please enter valid count for products")
+            retry()
+        }else{
+            getProductDetails(productCount - 1)
+        }
+    })
+}
 
 //getting input from the user for the list of products
 function getProductDetails(productCount) {
@@ -65,3 +72,5 @@ function calculatePrice() {
     }
     console.log("The total price is " + totalPrice)
 }
+//Overall function call
+retry()
