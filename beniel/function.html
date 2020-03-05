@@ -1,0 +1,84 @@
+/* function concept in javascript */
+/*
+@author: beniel
+@version :html 5 with js
+@since:02-03-2020
+*/
+<html>
+    <body>
+       <h1 >discuss about function</h1>
+    <script>
+        function normal() {
+            document.writeln("normal function");
+            document.writeln("<br></br>");
+        }
+        normal();
+        // function name as arguments //
+        let g=function value(a , b){
+            return a*b;
+        }
+        document.writeln(g(5,6));
+         // anonymas functions method //
+        var k=function () {                   
+            document.writeln("<br></br> anonymas function ")
+        }
+        // setInterval method //
+        setInterval(() => {
+            document.writeln("<br></br>");
+            document.writeln("this is setinterval function ............         ");
+        }, 30000);
+        // setTimeout method //
+        setTimeout(() => {
+            document.writeln("<br></br>");
+            document.writeln("hi hello calibraint");
+            
+        }, 4000); 
+        // generators method //
+        function *generators()
+        {
+            yield 20;
+            document.writeln("<br></br>");
+            document.writeln("<b>generatots</b> method called");
+            yield 34;
+        }
+        var z=generators();
+        console.log(z.next());
+        console.log(z.next());
+        // function using terinary opereator //
+        function ter(a,b)
+        {
+            return a<b ? a*b : a/b ;
+        }
+        document.writeln("<br></br>");
+        document.writeln(ter(5,6));
+        document.writeln("<br></br>");
+        document.writeln(ter(18,6));
+        // function overloading //
+        function over(p,q,w) {
+            return p+q+w;
+        }
+        function over(p,q) {
+            return p*q;
+        }
+        // actually in java script overloading not working it may take last function(in same name functions) as default//
+        document.writeln("<br></br>");
+        document.writeln(over(20,10));
+        function jos(d)
+        {
+            document.writeln("<br></br>");
+            document.writeln("hi");
+            d();                            // call other function usind callback() function method //
+        }
+        function esh()
+        {
+            document.writeln("employees");
+        }
+        jos(esh);
+        // self invoking method //
+        (function()
+        {
+            document.writeln("<br></br> invoke function");
+        })()
+    </script>
+    </body>
+</html>

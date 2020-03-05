@@ -1,0 +1,44 @@
+/* mirror of the String code for  lower case alphabet 
+*@author : beniel
+*@version: 1.0
+*@since : 28-02-2020
+*/
+<html>
+  <head>
+    <script>
+        function fun()
+        {
+            var str=prompt("enter the string :");    // get input from user using prompt method
+            //storing the reverse of the Lower alphabets in a string
+            var a="zyxwvutsrqponmlkjihgfedcba";
+            //storing the reverse of the Upper alphabets in a string      
+            var b="ZYXWVUTSRQPONMLKJIHGFEDCBA";
+            var c="";
+            // storing length of the input String
+            var n=str.length;    
+            // for loop for perform each characters in a String                    
+            for (let i = 0; i < n; i++)              
+            {
+                 if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z')
+                {
+                    c =c+ a.charAt(str.charCodeAt(i)-97); 
+                }
+                else if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z')
+                {
+                    c =c+ b.charAt(str.charCodeAt(i)-65);
+                }
+                else
+                {
+                    c =c+ str.charAt(i);
+                } 
+            }
+            +//printing out the mirroredString as output
+            document.writeln("the mirror of the string "+str+" is "+c);
+        }
+    </script>
+</head>
+    <body>
+        <p1> Click below to perform <b> String mirror</b> for lower alphabet </p>
+        <button onclick="fun()">try</button>
+    </body>
+</html>
