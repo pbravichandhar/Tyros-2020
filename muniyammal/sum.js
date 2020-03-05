@@ -14,9 +14,9 @@ let reports = [{
 }
 ];
 
-let profit =_.sumBy(reports, function (muruga) {
+let profit =_.sumBy(reports, function (day) {
 
-    return muruga.sales;
+    return day.sales;
 
 });
 
