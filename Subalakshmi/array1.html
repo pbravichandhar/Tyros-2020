@@ -3,23 +3,21 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
 let person = {
     name: "",
     notes: []
 };
-// runtime input get from user
 let inputArray = [];
 rl.question('Enter your name:', (name) => {
     person.name = name;
     
     rl.question('Enter no of elements:',(number)=>{
-        recursiveReadline(number-1);    //recursive function used
+        recursiveReadline(number-1);
     });
 });
-
 function recursiveReadline(number){
     rl.question('Enter elements:',(elements)=>{
+       {
             inputArray[number] = elements;
         }
         recursiveReadline(number-1);
@@ -31,10 +29,8 @@ function recursiveReadline(number){
         }
     });
 }
-
 function printObject(){
     person.notes.push(inputArray);
-
     let max = 0;
     for(let j=0;j<inputArray.length-1;j++){
         if(max < inputArray[j]){
@@ -44,5 +40,3 @@ function printObject(){
     person.topNote = max;
     console.log(person);
 }
-
-
