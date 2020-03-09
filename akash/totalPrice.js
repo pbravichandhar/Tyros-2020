@@ -14,7 +14,7 @@ const read = readline.createInterface({
 
 let productList = []
 
-let retry = function(){
+const retry = function(){
     read.question('Enter the no of products:', (productCount) => {
         if(isNaN(parseInt(productCount))){
             console.log("Please enter valid count for products")
