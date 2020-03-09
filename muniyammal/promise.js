@@ -3,7 +3,7 @@ function onSuccess(){
 }
 function onFailure(){
     console.log('I am not a student')
-    throw new Error()
+    // throw new Error()
 }
 const promise = new Promise ((yes ,no)=>{
     setTimeout(()=>{
