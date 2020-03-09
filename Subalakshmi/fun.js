@@ -3,21 +3,17 @@ function getPromise () {
       setTimeout(resolve, 5000)
     })
   }
-  
-  function logA () {
+  function funA () {
     console.log('A')
   }
-  
-  function logB () {
+   function funB () {
     console.log('B')
   }
-  
-  function logCAndThrow () {
+  function funCAndThrow () {
     console.log('C')
   
     throw new Error()
   }
-  
   function catchError () {
     console.log('Error!')
   }
