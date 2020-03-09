@@ -1,3 +1,9 @@
+/*
+@author : beniel
+@date: 03-03-2020
+@version : node js
+*/
+
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -5,13 +11,15 @@ const rl = readline.createInterface({
 });
 let input_array = [];
 rl.question('Enter no of elements:', (number) => {
-    arrayinput(number - 1);
+    arrayinput(number);
 });
 
 function arrayinput(number) {
     rl.question('Enter elements:', (elements) => {
-        input_array[number] = elements;
-        arrayinput(number - 1);
+        for (let i = 0; i < number; i++) {
+            input_array[i] = elements;
+        }
+        arrayinput(--number);
         if (number == 0) {
             console.log(input_array);
             LCM();
