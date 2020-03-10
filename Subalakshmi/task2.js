@@ -3,34 +3,17 @@ const a =arrange. createInterface({
 input : process . stdin,
 output : process . stdout
 })
-a.question("enter the no of elements",(n)=>{
-let count = 0;
-const arrange = (n,c)=> {
-if (c == n.length)
-{
-for (let i = 0; i < n.length; i++)
-{
-console.log(" [" + n[i] + "] ");
-}
-count++;
-}
-else
-{
-for (let i = c; i < n.length; i++)
-{
-let temp = n[c];
-n[c] = n[i];
-n[i] = temp;
-
-arrange(n, c + 1);
-
-temp = n[c];
-n[c] = n[i];
-n[i] = temp;
-}
-}
-}
-arrange(n,0);
-console.log("combination of the elements" + n + "are" + count);
-a.close();
+a.question("enter the number",(n)=>{
+let count = 0; 
+let N;
+    for (let L = 1; L * (L + 1) < 2 * N; L++) 
+    { 
+        let a = (1.0 * N-(L * (L + 1)) / 2) / (L + 1); 
+        if (a-a == 0.0)  
+            count++;         
+    } 
+    return count; 
+console.log("the sum is "  + count);
 })
+
+
