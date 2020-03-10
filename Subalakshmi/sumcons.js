@@ -22,11 +22,8 @@ function findConsecutive()
             if (sum > N) 
 
                 break; 
-
         } 
-
         sum = 0; 
-
         start++; 
 
     } 
