@@ -9,7 +9,7 @@ function printPermutations(input, prefix){
        printPermutations(reminder, prefix+input.charAt(i));
      }
   }
-}
+}s
 printPermutations(input, "");
 console.log(output);
 console.log("Length: 4! :"+ output.length);
