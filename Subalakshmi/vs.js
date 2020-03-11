@@ -15,5 +15,5 @@ let temp,i,j,count;
                 count++;
             }
         }
-    }
 console.log("count"+count);
+}

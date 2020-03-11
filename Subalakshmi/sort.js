@@ -1,4 +1,4 @@
-let arr1=[-3,8,7,6,5,-4,3,2,1];
+let arr1=['suba','ananthi','vijay'];
 let arr2=[];
 let min=arr1[0];
 let pos;
