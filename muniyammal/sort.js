@@ -1,23 +1,15 @@
-const sort = require("readline")
-const s = sort.createInterface({
-    input : process.stdin,
-    output : process.stdout
-})
-let sort_array = [];
-s.question('Enter the elements:', (stringr) => {
-    arraysort(string);
-
-            function sort(a, b) {
-                if (a > b) {
-                  return 1;
-                } else if (a < b) {
-                  return -1;
-                } else if (a === b) {
-                  return 0;
-                }
-                else{
-                    console.log('invalid....');
-                }
-           s.close();
-            }
-        });
+let arr =['milk','apple','lion'];
+let n = arr.length;
+let temp;
+   for (let i = 1; i < n; i++) {
+    for (let j = i; j > 0; j--) {
+     if (arr[j] < arr [j - 1]) {
+      temp = arr[j];
+      arr[j] = arr[j - 1];
+      arr[j - 1] = temp;
+     }
+    }
+   }
+   for (let i = 0; i < n; i++) {
+     console.log(arr[i]) ;
+   }
