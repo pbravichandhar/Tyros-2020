@@ -1,0 +1,9 @@
+(function() {
+      // outside of this anonymous function
+    var myPrivateVariable = "hi!";
+
+    function logVar() {
+      console.log(myPrivateVariable);
+    }
+    logVar();
+})();
