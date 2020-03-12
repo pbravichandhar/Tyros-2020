@@ -1,0 +1,45 @@
+/*
+*<h6> Mirror replacement for alphabets in javascripts </h6> 
+*
+*@author Arunkumar
+*@version 1.0
+*@since 28-02-2020 
+*/
+<html>
+  <head>
+    <script>
+        function func()
+        {
+            var string=prompt("enter the stringing :");      //  Get input 
+            var alphabet="zyxwvutsrqponmlkjihgfedcba";       // declare alphabets in small case
+            var capalphabet="ZYXWVUTSRQPONMLKJIHGFEDCBA";    // decalre alphabets in capital case
+            var mirror="";
+            var n=string.length;
+            for (let i = 0; i < n; i++) 
+            {
+                // check whether alphabets or  not with case
+              if(string.charAt(i) >= 'a' && string.charAt(i) <= 'z')  
+               {
+                  mirror=mirror+ alphabet.charAt(string.charCodeAt(i)-97); 
+               }
+               // check whether alphabets or  not with case
+               else if(string.charAt(i) >= 'A' && string.charAt(i) <= 'Z')
+               {
+                  mirror=mirror+ capalphabet.charAt(string.charCodeAt(i)-65);
+               }
+                // adding non alphabets 
+                else
+                {
+                    mirror=mirror+ string.charAt(i);
+                } 
+            }
+            // show the mirror replacement 
+            document.writeln("The Mirror replacement of the given string: "+string+" is "+mirror);
+        }
+    </script>
+</head>
+    <body>
+        <h1><b>Mirror replacement for alphabets</b></p>
+        <button onclick="func()">start</button>
+    </body>
+</html>
