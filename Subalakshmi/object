@@ -1,0 +1,14 @@
+let person = { 
+    gender : "male"
+} 
+  
+var person1 = Object.create(person); 
+person1.name = "sundar"; 
+person1.age = 21; 
+person1.nationality = "Indian"; 
+  
+for (let key in person1) { 
+// Output : name, age, nationality  
+// and gender 
+    console.log(key);  
+}           
