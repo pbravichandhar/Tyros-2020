@@ -1,0 +1,20 @@
+let _ = require('lodash');    
+let fruits = [
+    {                         
+    name : 'apple ',
+    weight : 5 ,
+    price : 50
+    },{
+        name : 'orange' ,
+        weight : 3,
+        price : 70
+        },{
+            name : 'banana' ,
+            weight : 3 ,
+            price : 15
+        }
+];
+let total =_.sumBy(fruits , function(product){           
+    return product.price * product.weight ;
+});
+console.log ( total );

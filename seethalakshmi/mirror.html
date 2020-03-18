@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>"Mirror"</title>
+</head>
+<body>
+<script>
+// variable reversedstring holds the value of lowercase letters
+var reversedstring="zyxwvutsrqponmlkjihgfedcba";
+//variable rstring holds the value of uppercase letters
+var rstring="ZYXWVUTSRQPONMLKJIHGFEDCBA"
+//variable str is used to get the user input
+var str=window.prompt("Enter the input string:");
+//variable ss returns the output and it is declared as null here
+var ss=" ";
+//variable l holds the length of the input string
+var l=str.length;
+var i=0;
+// mirroring the input string and storing the string in ss
+if (str.CharAt(i)>='a'&&str.CharAt(i)<='z'){
+do{
+    ss+=reversedstring.CharAt(str.CharCodeAt(i)-97);
+    i++;
+}while(i<l);
+}
+else if(str.CharAt(i)>='A'&&str.CharAt(i)<='Z'){
+    for(i=0;i<l;i++){
+        ss+=rstring.CharAt(str.CharCodeAt(i)-65);
+}
+}
+else{
+    ss=str.CharAt(i);
+}
+    window.alert(ss);
+</script>
+</body>
+</html>
