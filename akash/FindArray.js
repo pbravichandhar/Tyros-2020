@@ -10,7 +10,7 @@ while (wordCount < array2.length){
             count+=1
         }
     }
-    console.log(count)
+    console.log(array2[wordCount]+" has appeared "+count+" times")
     wordCount += 1
 }
 
