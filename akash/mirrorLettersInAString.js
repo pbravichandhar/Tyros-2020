@@ -7,7 +7,7 @@
  */
 
 // Get process.stdin as the standard input object.
-var standard_input = process.stdin;
+let standard_input = process.stdin;
 
 // Set input character encoding.
 standard_input.setEncoding('utf-8');
@@ -23,10 +23,10 @@ standard_input.on('data', function (data, inputString) {
 
 
     //storing the reverse of the alphabets in a string
-    let reveresedString = "zyxvutsrqponmlkjihgfedcba";
+    const reveresedString = "zyxvutsrqponmlkjihgfedcba";
 
     //storing the reverse of the capital alphabet letters
-    let capitalReversedString = "ZYXVUTSRQPONMLKJIHGFEDCBA";
+    const capitalReversedString = "ZYXVUTSRQPONMLKJIHGFEDCBA";
 
     //getting the length of the input string
     let length = inputString.length;
@@ -47,10 +47,6 @@ standard_input.on('data', function (data, inputString) {
     //printing out the mirroredString as output
     console.log(mirroredString);
 
-
     //This part is to get out of the program by typing exit in the terminal
-    if(data == "exit\n" || data == "EXIT\n"){
-        console.log("Thank you!");
-        process.exit();
-    }
+    if(data.toLowerCase() == "exit\n") process.exit();
 });

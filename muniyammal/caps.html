@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title> mirror letters </title>
+</head>
+
+<body>
+    <script>
+        var str = window.prompt("enter the string");
+        var a = "zyxwvutsrqponmlkjihgfedcba"
+        var b = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+        var c = "";
+        for (let i = 0; i < str.length; i++) {
+            if (charAt(i) ==+ 'a' && charAt(i) == 'z') {
+                c = c + a.charAt(str.charCodeAt(i) - '97');
+            }
+            else if (charAt(i) == 'A' && charAt(i) == 'Z') {
+                c = c + b.charAt(str.charCodeAt(i) - '65');
+            }
+            else {
+                c = c + str.charAt(i);
+            }
+        }
+        document.writeln("the mirror of the string " + str + " is " + c);
+    </script>
+</body>
+
+</html>

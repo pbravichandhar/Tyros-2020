@@ -1,0 +1,100 @@
+/**
+*<h1> This program explaines the concepts of oops in java scripts </h1> 
+*@author Arunkumar</br>
+*@version 1.0</br>
+*@since 05-03-2020</br>
+*/
+<html>
+<head>
+<script type="text/javascript">
+// objects 
+function person(first_name,last_name){ 
+   this.first_name = first_name; 
+   this.last_name = last_name; 
+} 
+                           
+let person1 = new person('siva','raja');    //creating new instances 
+let person2 = new person('Rahul','kumar'); 
+  
+document.writeln(`</br>${person1.first_name} ${person1.last_name}`);; 
+document.writeln(`</br>${person2.first_name} ${person2.last_name}`);
+// inheritance
+var ClassA = function() {
+    this.name = "class A";
+}
+ClassA.prototype.print = function() {
+    document.writeln("</br>"+this.name);
+}
+var a = new ClassA();
+a.print();
+// constructor
+ function electronics()
+ {
+   this.name="processor";
+   this.core="octa";
+ }
+ var ref=new electronics();
+ ref.version="i7";
+
+ var ref1=new electronics();
+ document.writeln("</br>ref.version of ref"+ref.version);
+ document.writeln("ref.version of ref 1"+ref1.version);
+//constructor stealing
+  function maincolors(){
+    this.colors = ["red", "blue", "green"];
+    }
+    function subcolors(){
+        //inherit from maincolors
+     maincolors.call(this);
+  }
+    var instance1 = new subcolors();
+    instance1.colors.push("black");
+    document.writeln("</br>The updated colors :"+instance1.colors); 
+    var instance2 = new subcolors();
+    document.writeln("</br>The colors :"+instance2.colors);   
+  //class
+  class institution {
+    constructor(name, year, city) { //constructor
+        this.name = name
+        this.year = year
+        this.city = city
+    }
+
+    data() {
+        console.log(`${this.name} built in  ${this.year}, located in ${this.city}`)
+    }
+
+    update(tech) {
+        console.log(`${this.name} is working in ${tech}`)
+    }
+
+    //static method inside the class
+    static getCaption() {
+        console.log(`srm built digital class romm`)
+    }
+  }
+
+const institution1 = new institution('srm', 2011, 'Chennai')
+institution1.data()
+institution1.update('AI')
+//static methods call 
+institution.getCaption()
+//  prototype
+ function electronics()
+ {
+   this.name="processor";
+   this.core="octa";
+ }
+  electronics.prototype.version="i7";
+ var ref=new electronics();
+ var ref1=new electronics();
+ document.writeln("</br>version of ref:"+ref.version);
+ document.writeln("</br>version of ref 1:"+ref1.version);
+        
+</script>	
+</head>
+<body>
+ <h1>oops in js</h1>
+ 	
+</body>
+</html>
