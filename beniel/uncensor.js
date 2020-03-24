@@ -9,8 +9,8 @@
  *        
  */
 
-let censored_array=[];
-let missing_words=[];
+let censored_array;
+let missing_words;
 censored_array="$PP$RC$S$$$"
 missing_words="UEAE"
 let uncensored_word =[];
