@@ -23,7 +23,7 @@ rl.question('Enter the number count to perform LCM:',(count)=>{
 function recursiveReadline(count){
     rl.question('Enter elements:',(numbers)=>{
         // for(let i=0;i<count;i++){
-            lcmArray[count] = numbers;
+            lcmArray.push(numbers);
         // }
     
     recursiveReadline(count-1);
