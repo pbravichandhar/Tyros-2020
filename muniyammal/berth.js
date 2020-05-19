@@ -3,7 +3,7 @@ const s =seat.createInterface({
     input : process.stdin,
     output : process.stdout
 })
-s.question("enter the seat numner",(number)=>{
+s.question("enter the seat number",(number)=>{
 let n = number % 8;
 if (n > 0 && n < 70)
    if(n==1 || n==4) {

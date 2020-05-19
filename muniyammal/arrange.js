@@ -5,7 +5,7 @@ const a =arrange. createInterface({
 })
 a.question("enter the no of elements",(n)=>{
     let count = 0;
-      n = ['h','b','c'];
+      n = ['1','2','3','4','5'];
       const arrange = (n,c)=> {
         if (c == n.length) 
         {
